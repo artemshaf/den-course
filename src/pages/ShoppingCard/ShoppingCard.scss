@@ -1,0 +1,83 @@
+.shopping-card {
+  width: 370px;
+  position: fixed;
+  transform: translateX(100%);
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background: white;
+  z-index: 10;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  &__title {
+    color: white;
+    padding: 10px;
+    &-block {
+      display: flex;
+      vertical-align: middle;
+      background: var(--dark);
+      margin: -10px;
+      padding-bottom: 0;
+      margin-bottom: 5px;
+    }
+  }
+  &__nav-list {
+    display: flex;
+    margin: 10px 0;
+    text-transform: capitalize;
+    &-item {
+      margin-right: 5px;
+      opacity: 0.4;
+      cursor: not-allowed;
+      &:nth-child(n + 2) {
+        &::before {
+          margin-right: 5px;
+          content: "/";
+        }
+      }
+
+      &_active {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+  &__price {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__btn {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-top: auto;
+    }
+    &_close {
+      margin-left: auto;
+      cursor: pointer;
+    }
+    &_next {
+      margin: 5px 0;
+      width: 100%;
+    }
+  }
+  &_active {
+    transform: translateX(0);
+  }
+  &__actions-block {
+    height: auto;
+    margin-bottom: auto;
+  }
+  &__centered {
+    font-size: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+  }
+}

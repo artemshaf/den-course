@@ -1,0 +1,36 @@
+.clothes-filters {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    font-size: var(--font-lg);
+  }
+
+  &__filter {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition-md);
+    
+    &:hover {
+      transform: scale(1.1);
+    }
+    &-text {
+      margin-top: 4px;
+      margin-left: 10px;
+      opacity: 1;
+      color: var(--dark);
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 28px;
+
+    & > * {
+      cursor: pointer;
+    }
+  }
+}

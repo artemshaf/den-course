@@ -1,0 +1,16 @@
+.rating-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  &__item {
+    &_grey {
+      fill: var(--grey);
+    }
+    &_editable {
+      cursor: pointer;
+    }
+  }
+  &__count {
+    margin-left: 10px;
+  }
+}
